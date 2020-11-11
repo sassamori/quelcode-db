@@ -35,7 +35,7 @@ CREATE TABLE rooms(
 
 CREATE TABLE tasks(
     id              INTEGER(11) PRIMARY KEY AUTO_INCREMENT,
-    room_id         INTEGER(11) REFERENCES rooms(id),
+    room_id         INTEGER(11),
     content         VARCHAR(1000) NOT NULL,
     staff_id        INTEGER(11) NOT NULL,
     deadline        DATETIME,
@@ -44,17 +44,20 @@ CREATE TABLE tasks(
     created_at      DATETIME NOT NULL,
     create_user_id  INTEGER(11) NOT NULL,
     updated_at      DATETIME NOT NULL,
-    update_user_id  INTEGER(11) NOT NULL
+    update_user_id  INTEGER(11) NOT NULL,
+    FOREIGN KEY (room_id) REFERENCES rooms(id)
 );
 
 CREATE TABLE posts(
     id              INTEGER(11) PRIMARY KEY AUTO_INCREMENT,
-    room_id         INTEGER(11) REFERENCES rooms(id),
+    room_id         INTEGER(11),
     content         VARCHAR(1000) NOT NULL,
     file_name       VARCHAR(100),
     is_deleted      TINYINT(1) NOT NULL,
     posted_at       DATETIME NOT NULL,
     post_user_id    INTEGER(11) NOT NULL,
     updated_at      DATETIME NOT NULL,
-    update_user_id  INTEGER(11) NOT NULL
+    update_user_id  INTEGER(11) NOT NULL,
+    FOREIGN KEY (room_id) REFERENCES rooms(id)
+
 );
