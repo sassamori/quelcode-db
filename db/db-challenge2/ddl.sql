@@ -12,10 +12,12 @@ CREATE TABLE users(
 );
 
 CREATE TABLE participations(
-    user_id     INTEGER(11) REFERENCES users(id),
-    room_id     INTEGER(11) REFERENCES rooms(id),
+    user_id     INTEGER(11),
+    room_id     INTEGER(11),
     joined_at   DATETIME NOT NULL,
-    PRIMARY KEY(user_id,room_id)
+    PRIMARY KEY(user_id,room_id),
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (room_id) REFERENCES rooms(id)
 );
 
 CREATE TABLE rooms(
