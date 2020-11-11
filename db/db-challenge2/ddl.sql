@@ -19,7 +19,7 @@ CREATE TABLE participations(
 );
 
 CREATE TABLE rooms(
-    id                                  INTEGER(11) PRIMARY KEY REFERENCES participations(rooms_id) AUTO_INCREMENT,
+    id                                  INTEGER(11) PRIMARY KEY AUTO_INCREMENT,
     room_name                           VARCHAR(100) NOT NULL UNIQUE,
     summary                             VARCHAR(1000),
     is_enabled_to_upload                TINYINT(1) DEFAULT 0 NOT NULL,
