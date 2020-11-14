@@ -37,7 +37,7 @@ CREATE TABLE tasks(
     id              INTEGER(11) PRIMARY KEY AUTO_INCREMENT,
     room_id         INTEGER(11),
     content         VARCHAR(1000) NOT NULL,
-    staff_id        INTEGER(11) NOT NULL,
+    task_staff_id        INTEGER(11) NOT NULL,
     deadline        DATETIME,
     is_done         TINYINT(1) DEFAULT 0 NOT NULL,
     is_deleted      TINYINT(1) DEFAULT 0 NOT NULL,
