@@ -21,23 +21,23 @@ CREATE TABLE participations(
 );
 
 CREATE TABLE rooms(
-    id                                  INTEGER(11) PRIMARY KEY AUTO_INCREMENT,
-    name                                VARCHAR(100) NOT NULL UNIQUE,
-    summary                             VARCHAR(1000),
-    is_enabled_to_upload                TINYINT(1) DEFAULT 0 NOT NULL,
-    is_direct_chat                      TINYINT(1) DEFAULT 0 NOT NULL,
-    is_deleted                          TINYINT(1) DEFAULT 0 NOT NULL,
-    created_at                          DATETIME NOT NULL,
-    create_user_id                      INTEGER(11) NOT NULL,
-    updated_at                          DATETIME NOT NULL,
-    update_user_id                      INTEGER(11) NOT NULL
+    id                      INTEGER(11) PRIMARY KEY AUTO_INCREMENT,
+    name                    VARCHAR(100) NOT NULL UNIQUE,
+    summary                 VARCHAR(1000),
+    is_enabled_to_upload    TINYINT(1) DEFAULT 0 NOT NULL,
+    is_direct_chat          TINYINT(1) DEFAULT 0 NOT NULL,
+    is_deleted              TINYINT(1) DEFAULT 0 NOT NULL,
+    created_at              DATETIME NOT NULL,
+    create_user_id          INTEGER(11) NOT NULL,
+    updated_at              DATETIME NOT NULL,
+    update_user_id          INTEGER(11) NOT NULL
 );
 
 CREATE TABLE tasks(
     id              INTEGER(11) PRIMARY KEY AUTO_INCREMENT,
     room_id         INTEGER(11),
     content         VARCHAR(1000) NOT NULL,
-    task_staff_id        INTEGER(11) NOT NULL,
+    task_staff_id   INTEGER(11) NOT NULL,
     deadline        DATETIME,
     is_done         TINYINT(1) DEFAULT 0 NOT NULL,
     is_deleted      TINYINT(1) DEFAULT 0 NOT NULL,
