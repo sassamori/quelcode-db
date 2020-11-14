@@ -24,7 +24,7 @@ CREATE TABLE rooms(
     id                      INTEGER(11) PRIMARY KEY AUTO_INCREMENT,
     name                    VARCHAR(100) NOT NULL UNIQUE,
     summary                 VARCHAR(1000),
-    is_enabled_to_upload    TINYINT(1) DEFAULT 0 NOT NULL,
+    is_enabled_to_upload    TINYINT(1) DEFAULT 1 NOT NULL,
     is_direct_chat          TINYINT(1) DEFAULT 0 NOT NULL,
     is_deleted              TINYINT(1) DEFAULT 0 NOT NULL,
     created_at              DATETIME NOT NULL,
