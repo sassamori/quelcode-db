@@ -59,5 +59,4 @@ CREATE TABLE posts(
     updated_at      DATETIME NOT NULL,
     update_user_id  INTEGER(11) NOT NULL,
     FOREIGN KEY (room_id) REFERENCES rooms(id)
-
 );
