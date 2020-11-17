@@ -1,4 +1,4 @@
-INSERT INTO users
+INSERT INTO `users`
 (`mail`,`password`,`name`,`introduction`,`work_phone_number`,`cell_phone_number`,`is_deleted`,`created_at`,`updated_at`)
 VALUES(
 ('admin@labot.inc','admin','admin','このスペースの管理者です。','00-0000-0000',null,0,'2020/04/20 15:47:52','2020/04/20 15:47:52'),
