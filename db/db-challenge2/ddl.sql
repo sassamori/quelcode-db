@@ -11,14 +11,6 @@ CREATE TABLE users(
     updated_at          DATETIME NOT NULL
 );
 
-CREATE TABLE participations(
-    user_id     INTEGER(11),
-    room_id     INTEGER(11),
-    joined_at   DATETIME NOT NULL,
-    PRIMARY KEY(user_id,room_id),
-    FOREIGN KEY (user_id,room_id) REFERENCES users(id),rooms(id)
-);
-
 CREATE TABLE rooms(
     id                      INTEGER(11) PRIMARY KEY AUTO_INCREMENT,
     name                    VARCHAR(100) NOT NULL UNIQUE,
@@ -30,6 +22,14 @@ CREATE TABLE rooms(
     create_user_id          INTEGER(11) NOT NULL,
     updated_at              DATETIME NOT NULL,
     update_user_id          INTEGER(11) NOT NULL
+);
+
+CREATE TABLE participations(
+    user_id     INTEGER(11),
+    room_id     INTEGER(11),
+    joined_at   DATETIME NOT NULL,
+    PRIMARY KEY(user_id,room_id),
+    FOREIGN KEY (user_id,room_id) REFERENCES (users(id),rooms(id))
 );
 
 CREATE TABLE tasks(
