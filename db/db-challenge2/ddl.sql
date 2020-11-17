@@ -16,8 +16,7 @@ CREATE TABLE participations(
     room_id     INTEGER(11),
     joined_at   DATETIME NOT NULL,
     PRIMARY KEY(user_id,room_id),
-    FOREIGN KEY (user_id) REFERENCES users(id),
-    FOREIGN KEY (room_id) REFERENCES rooms(id)
+    FOREIGN KEY (user_id,room_id) REFERENCES users(id),rooms(id)
 );
 
 CREATE TABLE rooms(
