@@ -1,3 +1,4 @@
+BEGIN;
 INSERT INTO users
 (mail,password,name,introduction,work_phone_number,cell_phone_number,is_deleted,created_at,updated_at)
 VALUES
@@ -13,3 +14,4 @@ VALUES
 ('javascript@labot.inc','react','js','Hello world','0120-555-458',null,0,'2020/04/24 05:03:58','2020/04/24 05:03:58'),
 ('microsoft@gmail.com','google','amazon','facebook',null,'080-9999-5555',1,'2020/04/24 06:00:02','2020/04/26 12:13:43')
 ;
+COMMIT;

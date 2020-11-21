@@ -1,3 +1,4 @@
+BEGIN;
 INSERT INTO rooms
 (name,summary,is_enabled_to_upload,is_direct_chat,is_deleted,create_user_id,created_at,update_user_id,updated_at)
 VALUES
@@ -10,3 +11,4 @@ VALUES
 ('りす','adminとjsのダイレクトチャット',1,1,0,1,'2020/04/24 10:55:21',1,'2020/04/24 10:55:21'),
 ('かめ','adminとamazonのダイレクトチャット',1,1,1,1,'2020/04/24 11:02:20',1,'2020/04/27 15:41:33')
 ;
+COMMIT;

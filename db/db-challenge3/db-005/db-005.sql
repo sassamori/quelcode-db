@@ -1,3 +1,4 @@
+BEGIN;
 INSERT INTO tasks
 (room_id,content,task_staff_id,deadline,is_done,is_deleted,created_at,create_user_id,updated_at,update_user_id)
 VALUES
@@ -10,3 +11,4 @@ VALUES
 (6,'投稿が見えるかチェック',3,null,0,0,'2020/04/26 11:22:44',1,'2020/04/26 11:22:44',1),
 (7,'投稿が見えるかチェック',10,null,0,0,'2020/04/26 13:23:50',1,'2020/04/26 13:23:50',1)
 ;
+COMMIT;

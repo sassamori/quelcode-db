@@ -1,3 +1,4 @@
+BEGIN;
 CREATE TABLE users(
     id                  INTEGER(11) PRIMARY KEY AUTO_INCREMENT,
     mail                VARCHAR(100) NOT NULL UNIQUE,
@@ -60,3 +61,4 @@ CREATE TABLE posts(
     update_user_id  INTEGER(11) NOT NULL,
     FOREIGN KEY (room_id) REFERENCES rooms(id)
 );
+COMMIT;

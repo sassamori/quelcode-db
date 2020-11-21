@@ -1,3 +1,4 @@
+BEGIN;
 INSERT INTO posts
 (room_id,content,file_name,is_deleted,posted_at,post_user_id,updated_at,update_user_id)
 VALUES
@@ -19,3 +20,4 @@ VALUES
 (7,'test',null,0,'2020/04/26 16:22:50',1,'2020/04/26 16:22:50',1),
 (7,'sss',null,1,'2020/04/26 17:11:23',10,'2020/04/26 18:09:37',10)
 ;
+COMMIT;

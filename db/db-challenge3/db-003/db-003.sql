@@ -1,3 +1,4 @@
+BEGIN;
 INSERT INTO participations
 (user_id,room_id,joined_at)
 VALUES
@@ -30,3 +31,4 @@ VALUES
 (1,8,'2020/04/24 11:02:20'),
 (11,8,'2020/04/24 11:02:20')
 ;
+COMMIT;
