@@ -1,4 +1,4 @@
-SELECT posts1.update_user_id,users.name,posts1.updated_at,posts1.room_id,rooms.name
+SELECT posts1.update_user_id,users.name AS ユーザー名,posts1.updated_at,posts1.room_id,rooms.name AS ルーム名
 FROM posts AS posts1
 LEFT JOIN users
 ON posts1.update_user_id = users.id
