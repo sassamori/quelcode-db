@@ -1,4 +1,4 @@
-SELECT posts1.update_user_id,users.name,posts1.update_at,posts1.room_id,rooms.name
+SELECT posts1.update_user_id,users.name,posts1.updated_at,posts1.room_id,rooms.name
 FROM posts AS posts1
 LEFT JOIN users
 ON posts1.update_user_id = users.id
@@ -8,7 +8,7 @@ WHERE users.is_deleted = 0 AND rooms.is_deleted = 0 AND posts1.update_user_id = 
     SELECT posts2.update_user_id
     FROM posts AS posts2 
     WHERE posts1.room_id = posts2.room_id
-    ORDER BY posts2.update_at DESC
+    ORDER BY posts2.updated_at DESC
     LIMIT 1
 )
 ORDER BY posts1.room_id ASC;
