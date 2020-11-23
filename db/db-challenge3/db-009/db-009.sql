@@ -7,7 +7,7 @@ SELECT
                  WHEN 6 THEN 'まり'
                  WHEN 7 THEN 'りす'
                  WHEN 8 THEN 'かめ'
-    END
+    END AS チャットルーム名
     ,COUNT(*) AS 投稿数
 FROM posts
 GROUP BY room_id
