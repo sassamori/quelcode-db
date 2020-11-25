@@ -1,14 +1,9 @@
-SELECT
-    CASE room_id WHEN 1 THEN 'りんご'
-                 WHEN 2 THEN 'ごりら'
-                 WHEN 3 THEN 'らっぱ'
-                 WHEN 4 THEN 'ぱんだ'
-                 WHEN 5 THEN 'ごま'
-                 WHEN 6 THEN 'まり'
-                 WHEN 7 THEN 'りす'
-                 WHEN 8 THEN 'かめ'
-    END AS チャットルーム名
-    ,COUNT(*) AS 投稿数
+SELECT rooms.name AS チャットルーム名,COUNT(*) AS 投稿数
 FROM posts
-GROUP BY room_id
+LEFT JOIN rooms
+ON posts.room_id = rooms.id
+LEFT JOIN users
+ON posts.post_user_id = users.id
+WHERE posts.is_deleted = 0 AND users.is_deleted = 0
+GROUP BY rooms.name
 ORDER BY 投稿数 DESC;
