@@ -1,4 +1,4 @@
-SELECT posts1.post_user_id,users.name AS ユーザー名,posts1.posted_at,posts1.room_id,rooms.name AS ルーム名
+SELECT users.name AS ユーザー名,posts1.posted_at AS 投稿日時,rooms.name AS ルーム名
 FROM posts AS posts1
 LEFT JOIN users
 ON posts1.post_user_id = users.id
